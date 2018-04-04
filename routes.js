@@ -46,6 +46,22 @@ router.post('/code/', jsonParser, function(req, res) {
 });
 
 
+/*get the url API to receive the token id  and check the code*/
+
+
+router.post( '/proof/:code', urlencoded, function(req,res){
+    var code = req.params.code 
+    var code =  '5ac54e813322d327d86452ff'
+
+});
+
+
+
+
+}
+
+
+
 
 
 
