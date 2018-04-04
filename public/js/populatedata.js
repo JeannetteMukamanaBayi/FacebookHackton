@@ -30,11 +30,12 @@ function storeCode() {
 
     $.ajax({
         data: CharacterData,
-        type: 'GET',
+        type: 'POST',
         contentType: 'application/json',
         url: '/code',
         success: function (results) {
-         alert('tests done')
+         alert(randomString)
+         
         },
         error: function (error) { }
     });
@@ -44,5 +45,5 @@ Handling more than one funct
 */
 
  
-console.log(randomString(6))
+
 
