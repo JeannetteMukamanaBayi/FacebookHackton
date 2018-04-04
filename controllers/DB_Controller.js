@@ -14,7 +14,6 @@ module.exports.saveCode = async function saveCode(code, callback) {
             callback(err, result);
         } else {
             console.log('DB controller initiate the schemas to insert a new code....');
-
             callback(err, result);
         }
     });
