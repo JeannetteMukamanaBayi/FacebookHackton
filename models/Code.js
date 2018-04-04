@@ -39,9 +39,8 @@ class Code {
     
 
     saveCode(callback) {
-        console.log("hitting the model");
+        console.log("hitting the model"), this;
         
-
         DB_Controller.saveCode(this, function(err, result) {
 
             callback(err, result)

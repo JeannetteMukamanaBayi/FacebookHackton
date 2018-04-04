@@ -21,16 +21,24 @@ const urlencoded = bodyParser.urlencoded({ extended: false });
 const jsonParser = bodyParser.json();
 var SecurityController= require('./controllers/SecurityController.js');
 
+
+
+/*this is the default */
+router.get('/', function(req,res){
+
+    res.render('pages/index')
+
+});
+
 router.post('/code/', jsonParser, function(req, res) {
+    console.log("req.body", req.body);
     SecurityController.saveCode(req.body.code, req.body.productId,  (err, result) => {
-        console.log("Hitting the route!!!!!!!!!!!!", result);
+        console.log("Hitting the route", result);
         if (err) {
             console.log("error:" + err);
             res.status(400).json(2);
 
         } else {
-
-
             res.status(200).json(1);
         }
     });
