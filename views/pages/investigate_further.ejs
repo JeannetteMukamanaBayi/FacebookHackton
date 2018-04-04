@@ -1,0 +1,62 @@
+<% include ../partials/header %>
+
+    <div id="search">
+        <nav class="navbar navbar-dark bg-dark justify-content-between">
+            <form class="form-inline">
+                <input type="text" name="searchTerm" id="searchTerm" value="" class="form-control mr-sm-2" />
+                <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="searchbtn" onclick="Onsearch()">Search</button>
+            </form>
+
+            <input type="radio" name="check" value="status" id="status" /> Search by status
+            <input type="radio" name="check" value="username" id="username">search by username
+            <input type="radio" name="check" value="public" id="public_messages" /> Public Messages
+            <input type="radio" name="check" value="private" id="private_messages" /> Private Messages
+            <input type="radio" name="check" value="announcements" id="announcements" />Public Announcements
+        </nav>
+    </div>
+
+    <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+    <div class="my-3 p-3 bg-white rounded box-shadow">
+        <div id="results"></div>
+    </div>
+
+
+    <!-- form to post messages -->
+    <div class="container">
+        <div class="my-3 p-3 bg-white rounded box-shadow">
+            <h6 class="border-bottom border-gray pb-2 mb-0">Investigate Further</h6>
+            
+            <div id="separator" style="height:20px;"></div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="postMessageForm" form class="form-group" action="/announcements" method="post">
+                        <div class="form-group">
+                            
+                            <input type="text" name="emergency_name" id="emergency_name" placeholder="emergency name" value="Emergency Name" class="form-control" />
+                            <div id="separator" style="height:20px;"></div>
+                            <input type="text" name="emergency_receiver" id="emergency_receiver" placeholder="receiver" class="form-control" value="" />
+                            <div id="separator" style="height:20px;"></div>
+                            <textarea type="text" class="form-control" id="details" name="content" rows="3" placeholder="Write Details"></textarea>
+                            <div class="mx-auto" style="height:10px;"></div>
+                            <div class="btn-panel">
+                                <button type="button" class="btn btn-primary mb-2" id="write_details">
+                                    <strong>Send</strong>
+                                </button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </main>
+    <% include ../partials/footer %>
+
+        <script>
+            loadAnnouncements();
+        </script>

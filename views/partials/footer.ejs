@@ -1,0 +1,41 @@
+<!-- views/partials/footer.ejs -->
+<footer class="footer col-md-4">
+    <div class="container">
+        <span class="text-muted" style="text-align:center">Copy Right 2018. Emergency Social Network.</span>
+    </div>
+</footer>
+
+<!--This the menus toggle scripts -->
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "60%";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+
+<!-- Bootstrap core JavaScript-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/md5.js"></script>
+<!-- Call the javascript files jquery and socket io -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.0.2/sha.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js" type="text/javascript"></script>
+
+
+<script src="../js/validateJoinScript.js"></script>
+<script src="../js/populatedata.js"></script>
+<script src="../js/joinScript.js"></script>
+
+<!--These file is the jquery processor for join and confirm page- the registration,confirmatiion and login + encryption -->
+<script src="../js/offcanvas.js"></script>
+<!-- This file is the jquery processor for home page-landing page- it handles user online status home statuses using socket-->
+<script src="../js/clientSide.js"></script>
+<script src="../js/homeScript.js"></script>
+<script src="../js/homeStatuses.js"></script>
+<script src="../js/searchHandler.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<% include ../partials/header %>
+    <div id="search">
+        <nav class="navbar navbar-dark bg-dark justify-content-between">
+            <form class="form-inline">
+                <input type="text" name="searchTerm" id="searchTerm" value="" class="form-control mr-sm-2" />
+                <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="searchbtn" onclick="Onsearch()">Search</button>
+            </form>
+
+            <input type="radio" name="check" value="status" id="status" /> Search by status
+            <input type="radio" name="check" value="username" id="username">search by username
+            <input type="radio" name="check" value="public" id="public_messages" /> Public Messages
+            <input type="radio" name="check" value="private" id="private_messages" /> Private Messages
+            <input type="radio" name="check" value="announcements" id="announcements" />Public Announcements
+        </nav>
+    </div>
+
+    <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+    <div class="my-3 p-3 bg-white rounded box-shadow">
+        <div id="results"></div>
+    </div>
+
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-12">
+                <!-- welcom message -->
+                <div class="jumbotron">
+                    <p class="lead">
+                        <h4>Welcome UserName:
+                            <span id="usernameSpan"></span>
+                        </h4>
+                        <p>Thank you for joining ESN application. Please see how you can share your status.</p>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img class="mb-4" src="../images/OK.png" alt="" width="25" height="25" align="left">
+                                    </td>
+                                    <td> Am OK </td>
+                                </tr>
+                                <tr class="success">
+                                    <td>
+                                        <img class="mb-4" src="../images/Help.png" alt="" width="25" height="25" align="left"> </td>
+                                    <td>I need Help</td>
+                                </tr>
+                                <tr class="success">
+                                    <td>
+                                        <img class="mb-4" src="../images/Emergency.png" alt="" width="25" height="25" align="left"> </td>
+                                    <td>My life is in danger</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+
+
+            </main>
+            <!--for running faster js code its reccommende it is placed down here-->
+            <% include ../partials/footer %>

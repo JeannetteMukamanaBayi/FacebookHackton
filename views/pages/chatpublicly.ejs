@@ -1,0 +1,59 @@
+<% include ../partials/header %>
+    <div id="search">
+        <nav class="navbar navbar-dark bg-dark justify-content-between">
+            <form class="form-inline">
+                <input type="text" name="searchTerm" id="searchTerm" value="" class="form-control mr-sm-2" />
+                <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="searchbtn" onclick="Onsearch()">Search</button>
+            </form>
+
+            <input type="radio" name="check" value="status" id="status" /> Search by status
+            <input type="radio" name="check" value="username" id="username">search by username
+            <input type="radio" name="check" value="public" id="public_messages" /> Public Messages
+            <input type="radio" name="check" value="private" id="private_messages" /> Private Messages
+            <input type="radio" name="check" value="announcements" id="announcements" />Public Announcements
+        </nav>
+    </div>
+
+    <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+    <div class="my-3 p-3 bg-white rounded box-shadow">
+        <div id="results"></div>
+    </div>
+
+    <!-- form to post messages -->
+    <div id="chatprivately">
+        <div class="container">
+            <div class="my-3 p-3 bg-white rounded box-shadow">
+                <div id="NewPublicMessages"></div>
+            </div>
+            <div id="showmessages"></div>
+
+            <!--- This section will handle the broadcast-->
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="form-group" action="/messages/public" method="post">
+                        <div class="form-group">
+                            <input type="hidden" name="username" id="username" value="micheal" />
+                            <textarea type="text" class="form-control" id="messageArea" name="content" rows="3" placeholder="Write Message"></textarea>
+                            <div class="mx-auto" style="height:10px;"></div>
+                            <div class="btn-panel">
+                                <button type="button" class="btn btn-primary mb-2" id="postMessage">
+                                    <strong>Post Public Message</strong>
+                                </button>
+                            </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </main>
+
+
+    <% include ../partials/footer %>
+        <script>
+            populatePublicMessages();
+        </script>

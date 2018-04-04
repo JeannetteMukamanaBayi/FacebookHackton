@@ -1,0 +1,48 @@
+<% include ../partials/header %>
+
+    <div id="search">
+        <nav class="navbar navbar-dark bg-dark justify-content-between">
+            <form class="form-inline">
+                <input type="text" name="searchTerm" id="searchTerm" value="" class="form-control mr-sm-2" />
+                <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="searchbtn" onclick="Onsearch()">Search</button>
+            </form>
+            <input type="radio" name="check" value="status" id="status" /> Search by status
+            <input type="radio" name="check" value="username" id="username">search by username
+            <input type="radio" name="check" value="public" id="public_messages" /> Public Messages
+            <input type="radio" name="check" value="private" id="private_messages" /> Private Messages
+            <input type="radio" name="check" value="announcements" id="announcements" />Public Announcements
+        </nav>
+    </div>
+
+    <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+    <div class="my-3 p-3 bg-white rounded box-shadow">
+        <div id="results"></div>
+    </div>
+
+    <div class="alert alert-danger" role="alert">
+      <a href="escalated_emergencies">  This is a danger alert—check it out! </a>
+    </div>
+
+    <!-- this div for sharing status -->
+    <div class="jumbotron">
+        <p>Suggestions</p>
+        <form>
+            <div class="form-check">
+                <input class="form-check-input" name="group100" type="radio" id="statusOkey" value="OK">
+                <label class="form-check-label" for="radio102">Escalate KeyWord</label>
+            </div>
+
+            <div class="mx-auto" style="height:10px;"></div>
+
+            <div class="btn-toolbar mb-2 mb-md-0">
+                <input onclick="updateEmergencyKeyWord()" type="button" id="btnUpdatescaletmessageStatus" value="Escalate Keyword" class="btn btn-outline-success" />
+                <input type="button" id="btnUpdatestatus" value="Undo Change" class="btn btn-outline-danger" />
+            </div>
+
+
+        </form>
+    </div>
+
+    </main>
+    <% include ../partials/footer %>
