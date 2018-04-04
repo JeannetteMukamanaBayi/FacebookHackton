@@ -56,33 +56,16 @@ router.get('/home', function(req, res) {
 });
 
 
-/*
- * posting a message, either public or private
- * @param {*} author
- *  @param {*} target
- * @param {*} content
- * @returns JSON  with 200 code status in case data have been successfully saved
- * @return JSON with 400 code if there has been a problem in accessing or reading from the db
- */
-router.post('/messages/', jsonParser, function(req, res) {
-    ChatController.postMessage(req.body.author, req.body.target, req.body.content, (err, result) => {
-        if (err) {
-            console.log("error:" + err);
-            res.status(400).json(2);
 
-        } else {
-            res.status(200).json(1);
-        }
-    });
-});
 
 /**
  * This is the get route for sharing status
  *
  */
 //define the confirmation route
-router.get('/sharestatus', function(req, res) {
+router.post('/storecode', function(req, res) {
     res.render('pages/sharestatus');
+    // 
 });
 
 

@@ -78,7 +78,7 @@
             <div class="carousel-item active">
               <img class="d-block img-fluid" src="../images/banner.png" alt="First slide">
             </div>
-          
+
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -90,103 +90,120 @@
           </a>
         </div>
 
-        <div class="row">
+        <form>
+          <div class="row">
 
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#">
-                <img class="card-img-top" src="../images/dress1.png" alt="">
-              </a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item One</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <a href="#">
+                  <img class="card-img-top" src="../images/dress1.png" alt="">
+                </a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="#">African Dress</a>
+                  </h4>
+                  <h5>$24.99</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                </div>
+                <div id="hidden_items">
+
+                  <input type="hidden" name="amount" id="amount" value="80000" />
+                  <input type="hidden" name="currency" id="currency" value="UGX" />
+                  <input type="hidden" name="account" id="account" value="+256783989902">
+                  <input type="hidden" name="productId" id="productId" value="ID34">
+
+                </div>
+
+
+                  <div class="btn-panel">
+                    <button type="button" onclick="storeCode()" class="btn btn-primary mb-2" id="buy">
+                      <strong>Buy</strong>
+                    </button>
+                  </div>
+
+                </div>
               </div>
+        </form>
 
-             
-              <div class="btn-panel">
-                <button type="button" class="btn btn-primary mb-2" id="postMessage">
-                    <strong>Add to cart</strong>
-                </button>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <a href="#">
+              <img class="card-img-top" src="../images/dress2.png" alt="">
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Item Two</a>
+              </h4>
+              <h5>$24.99</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.
+              </p>
             </div>
 
+
+            <div class="btn-panel">
+              <button type="button" class="btn btn-primary mb-2" id="postMessage">
+                <strong>Buy</strong>
+              </button>
             </div>
+
+
           </div>
+        </div>
 
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#">
-                <img class="card-img-top" src="../images/dress2.png" alt="">
-              </a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item Two</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit
-                  amet.</p>
-              </div>
-            
-
-              <div class="btn-panel">
-                <button type="button" class="btn btn-primary mb-2" id="postMessage">
-                    <strong>Add to cart</strong>
-                </button>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100">
+            <a href="#">
+              <img class="card-img-top" src="../images/dress3.png" alt="">
+            </a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Item Three</a>
+              </h4>
+              <h5>$24.99</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
             </div>
 
-
+            <div class="btn-panel">
+              <button type="button" class="btn btn-primary mb-2" id="postMessage">
+                <strong>Buy</strong>
+              </button>
             </div>
+
           </div>
+        </div>
 
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-              <a href="#">
-                <img class="card-img-top" src="../images/dress3.png" alt="">
-              </a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Item Three</a>
-                </h4>
-                <h5>$24.99</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              </div>
-             
-              <div class="btn-panel">
-                <button type="button" class="btn btn-primary mb-2" id="postMessage">
-                    <strong>Add to cart</strong>
-                </button>
-            </div>
 
-            </div>
-          </div>
-
-   
 
         </div>
         <!-- /.row -->
 
+        </div>
+        <!-- /.col-lg-9 -->
+
       </div>
-      <!-- /.col-lg-9 -->
+      <!-- /.row -->
 
-    </div>
-    <!-- /.row -->
-
-  </div>
-  <!-- /.container -->
-
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
     </div>
     <!-- /.container -->
-  </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="../js/vendor/jquery/jquery.min.js"></script>
-  <script src="../js/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/md5.js"></script>
+    <!-- Call the javascript files jquery and socket io -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+   <script src="http://cdn.rawgit.com/h2non/jsHashes/master/hashes.js"></script>
+    <script src="../js/jquerymin.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/populatedata.js"></script>
+    <script src="../js/validateJoinScript.js"></script>
 
 </body>
 

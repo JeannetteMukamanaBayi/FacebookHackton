@@ -1,9 +1,20 @@
 
-var Hashes = require('jshashes')
 var code = '';
 var productId = $("#productId").val();
 
 
+/* return hash string*/
+
+var randomiseString = function(length) {
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for(var i = 0; i < length; i++) {
+        code += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+
+        return  code;
+   
+}
 
 /* generate random strin */
 
@@ -18,12 +29,13 @@ var randomString = function(length) {
    
 }
 
-
-
   /**
  *return latest announcements from API 
  */
 function storeCode() {
+
+    alert(randomiseString (5))
+
     var data = {};
     data.code =  randomString(4);
     data.productId = productId;
@@ -34,7 +46,7 @@ function storeCode() {
         contentType: 'application/json',
         url: '/code',
         success: function (results) {
-         alert(randomString)
+        
          
         },
         error: function (error) { }
