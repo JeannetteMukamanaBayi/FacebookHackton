@@ -54,7 +54,7 @@ router.post( '/proof/:code', urlencoded, function(req,res){
     console.log(code);
     //var code =  '5ac54e813322d327d86452ff'
     SecurityController.proofCode(code, function (error, result){
-        console.log("Hitting the route", result);
+        //console.log("Hitting the route", result);
         if (error) {
             console.log("error:" + error);
             res.status(400).json(2);

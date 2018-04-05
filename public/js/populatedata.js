@@ -26,12 +26,11 @@ var randomString = function (length) {
 *return latest announcements from API 
 */
 function storeCode() {
- //   alert(randomString(5))
+    alert("Your verification code is ", randomString(5))
     var data = {};
     data.code = randomString(5);
     data.productId = productId;
 
-    //
 
     $.ajax({
         data: JSON.stringify(data),
