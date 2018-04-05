@@ -1,9 +1,4 @@
-/***the main routes of the ens application***/
-/*** the routes file uses express router ****/
-/** routes.js - Wiki route module.***/
-/**
- * Author : D.Bernard, Micheal, Gilbert, Jeannette, J.Ibare
- */
+
 
 const thisApp = require('./app.js');
 var express = require('express');
@@ -51,38 +46,21 @@ router.post('/code/', jsonParser, function(req, res) {
 
 router.post( '/proof/:code', urlencoded, function(req,res){
     var code = req.params.code 
-    var code =  '5ac54e813322d327d86452ff'
-
-});
-
-
-
-
-}
-
-
-
-
-
-
-router.post('/users/username/statuscode', jsonParser, function(req, res) {
-/*
-    ShareStatus.updateUserStatusCode(req.body.username, req.body.status, function(err, feedback) {
-
-        if (err) {
-
-            console.log('Fail to update the status:' + err);
-            res.status(400);
+    console.log(code);
+    //var code =  '5ac54e813322d327d86452ff'
+    SecurityController.proofCode(code, function (error, result){
+        console.log("Hitting the route", result);
+        if (error) {
+            console.log("error:" + error);
+            res.status(400).json(2);
 
         } else {
-
-            console.log('Last status updated successfully:' + feedback);
-            res.status(200);
+            console.log("from db works", result);
+            res.status(200).json(result);
         }
+
     });
-    */
 
 });
-
 
 module.exports = router;

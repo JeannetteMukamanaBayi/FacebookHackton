@@ -39,11 +39,19 @@ class Code {
     
 
     saveCode(callback) {
-        console.log("hitting the model"), this;
+        console.log("hitting the model", this);
         
         DB_Controller.saveCode(this, function(err, result) {
 
             callback(err, result)
+        });
+    }
+
+
+    proofCode(code, callback) {
+        console.log("hitting the model", code);
+        DB_Controller.proofCode(code, function(err, result) {
+              callback(err, result)
         });
     }
 }
