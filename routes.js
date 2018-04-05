@@ -32,7 +32,7 @@ router.post('/code/', jsonParser, function(req, res) {
     console.log("req.body", req.body.code);
     console.log(code)
 
-    SecurityController.saveCode(req.body.code, req.body.productId,  (err, result) => {
+    SecurityController.saveCode(code, req.body.productId,  (err, result) => {
         console.log("Hitting the route", result);
         if (err) {
             console.log("error:" + err);
@@ -61,7 +61,8 @@ router.post( '/proof/:code', urlencoded, function(req,res){
 
         } else {
             console.log("from db works", result);
-            res.status(200).json(result);
+         //   res.status(200).json(result);
+            res.redirect('http://41.220.12.206/services/webexpress/')
         }
 
     });
