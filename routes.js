@@ -15,6 +15,7 @@ router.use(bodyParser.urlencoded({ extended: false }));
 const urlencoded = bodyParser.urlencoded({ extended: false });
 const jsonParser = bodyParser.json();
 var SecurityController= require('./controllers/SecurityController.js');
+var sha1 = require('sha1');
 
 
 
@@ -26,7 +27,11 @@ router.get('/', function(req,res){
 });
 
 router.post('/code/', jsonParser, function(req, res) {
-    console.log("req.body", req.body);
+    var code = sha1(req.body.code)
+
+    console.log("req.body", req.body.code);
+    console.log(code)
+
     SecurityController.saveCode(req.body.code, req.body.productId,  (err, result) => {
         console.log("Hitting the route", result);
         if (err) {
