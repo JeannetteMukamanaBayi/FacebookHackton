@@ -22,17 +22,13 @@ var randomString = function (length) {
 }
 
 
-var hash = function (code){
-    return new Hashes.SHA1().b64(code);
-
-}
 /**
 *return latest announcements from API 
 */
 function storeCode() {
-    alert(randomString(5))
+ //   alert(randomString(5))
     var data = {};
-    data.code = randomString(4);
+    data.code = randomString(5);
     data.productId = productId;
 
     //
