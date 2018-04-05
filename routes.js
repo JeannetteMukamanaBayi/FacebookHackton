@@ -30,7 +30,7 @@ router.post('/code/', jsonParser, function(req, res) {
     var code = sha1(req.body.code)
 
     console.log("req.body", req.body.code);
-    console.log(code)
+    console.log("hashed code",code)
 
     SecurityController.saveCode(code, req.body.productId,  (err, result) => {
         console.log("Hitting the route", result);
